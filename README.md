@@ -102,9 +102,9 @@ Interact with the HR-ASSIST system through **Claude Desktop**:
 Here’s an example workflow:
 
 **Raise token image:**  
-<img width="427" height="371" alt="Image" src="https://github.com/user-attachments/assets/5cca4fd7-e7cb-4135-8f70-76c9e4240f51" />
+<img width="427" height="371" alt="Image" src="https://github.com/user-attachments/assets/5cca4fd7-e7cb-4135-8f70-76c9e4240f51" /></br>
 
-** Leave managment image **
+** Leave managment image **</br>
 <img width="458" height="325" alt="Image" src="https://github.com/user-attachments/assets/06ad0a73-c8fd-4ebc-8a00-9e6f8625b1c9" />
 
 
