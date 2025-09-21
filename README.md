@@ -1,126 +1,113 @@
+### 🤖 HR-ASSIST Agentic AI System
 
-<div align="center">
+Welcome to **HR-ASSIST**!  
+This project is an **intelligent agentic AI system** designed to automate and streamline **Human Resources workflows**.  
+It acts as a **central HR assistant**, capable of handling tasks like employee leave requests, meeting scheduling, new employee onboarding, and automated email communication.
 
-╔════════════════════════════════════════════════════════════╗  
-**🤖 HR-ASSIST Agentic AI System**  
-╚════════════════════════════════════════════════════════════╝  
+This example highlights the **automation of the employee onboarding process**, which normally requires manual intervention.
 
-*An intelligent agentic AI system designed to streamline and automate routine **Human Resources** workflows.*  
+-----
 
-</div>
+### Key Features ⚡️
 
----
+HR-ASSIST can perform the following tasks:
 
-### 📦 Overview
-HR-ASSIST acts as a **central HR assistant**, managing:
-```
-🟢 Employee leave requests
-🟢 Meeting scheduling
-🟢 New employee onboarding
-🟢 Automated email communication
-```
-This example highlights **employee onboarding automation**, reducing manual work.
+* **📆 Leave Management:** Employees can request leave through the chatbot. HR can review and approve/deny requests, while the system keeps a complete leave history.
+* **📅 Meeting Scheduling:** Schedule team or project meetings quickly and efficiently.
+* **👥 New Employee Onboarding:** Collects information from new employees, generates their profiles automatically, and stores details in the database.
+* **📧 Automated Email Communication:** Provide an email address and a topic, and the system drafts and sends a professional email.
+* **🎫 Ticket/Request Management:** Raise support tickets or request hardware (like a keyboard or mouse) with ease.
 
----
+-----
 
-### 🌟 Key Features
-╔════════════════════════════════╗  
-║ **Leave Management**: Request leave, HR approval, and leave history tracking.  
-║ **Meeting Scheduling**: Quickly arrange team or project meetings.  
-║ **New Employee Onboarding**: Auto-profile creation & database storage.  
-║ **Automated Email**: Drafts & sends professional emails instantly.  
-║ **Ticket Management**: Raise requests for IT support or hardware.  
-╚════════════════════════════════╝  
+### Architecture 🏗️
 
----
+HR-ASSIST is built using:
+* **MCP Client:** Claude Desktop
+* **MCP Server:** This codebase, which provides the tools for client interaction
 
-### 🛠️ Technical Architecture
-╔════════════════════════════════════════════╗  
-║ **MCP Client**  → Claude Desktop           ║  
-║ **MCP Server**  → This codebase & tools    ║  
-╚════════════════════════════════════════════╝  
+This architecture enables seamless communication between the Claude Desktop client and the HR automation server.
 
----
+-----
 
-### ⚙️ Setup & Configuration
-```
-1️⃣ Clone Repository:
-    git clone https://your-repository-url.git
-    cd atliq-hr-assist
+### Quick Start 🚀
 
-2️⃣ Configure claude_desktop_config.json:
-    {
-      "mcpServers": {
-        "hr-assist": {
-          "command": "C:\\Users\\dhaval\\.local\\bin\\uv",
-          "args": [
-            "--directory",
-            "C::\\code\\atliq-hr-assist",
-            "run",
-            "server.py"
-          ],
-          "env": {
-            "CB_EMAIL": "YOUR_EMAIL",
-            "CB_EMAIL_PWD": "YOUR_APP_PASSWORD"
-          }
-        }
-      }
-    }
+Getting started is simple. Follow these steps to set up HR-ASSIST:
 
-3️⃣ Create .env File:
-    EMAIL_USER=your_email@example.com
-    EMAIL_PASS=your_app_password
+1. **Clone the Repository:**  
+   ```bash
+   git clone https://your-repository-url.git
+   cd atliq-hr-assist
+   ```
 
-4️⃣ Install Dependencies:
-    pip install uv
-    uv init
-    uv add mcp[cli]
-```
+2. **Configure `claude_desktop_config.json`:**  
+   Add the following configuration:
+   ```json
+   {
+     "mcpServers": {
+       "hr-assist": {
+         "command": "C:\\Users\\dhaval\\.local\\bin\\uv",
+         "args": [
+           "--directory",
+           "C::\\code\\atliq-hr-assist",
+           "run",
+           "server.py"
+         ],
+         "env": {
+           "CB_EMAIL": "YOUR_EMAIL",
+           "CB_EMAIL_PWD": "YOUR_APP_PASSWORD"
+         }
+       }
+     }
+   }
+   ```
+   🔑 Replace:
+   - `YOUR_EMAIL` → Your actual email
+   - `YOUR_APP_PASSWORD` → Your email provider’s app-specific password (e.g., Gmail App Password)
 
----
+3. **Create a `.env` File:**  
+   Create a `.env` file in the root directory and add your email credentials:
+   ```text
+   EMAIL_USER=your_email@example.com
+   EMAIL_PASS=your_app_password
+   ```
 
-### 🚀 Usage
-╔════════════════════════════════════════════════════════════╗  
-║ Launch Claude Desktop → Configure → **Add from hr-assist** ║  
-╚════════════════════════════════════════════════════════════╝  
+4. **Install Dependencies:**  
+   Make sure `uv` is installed. Then run:
+   ```bash
+   pip install uv
+   uv init
+   uv add mcp[cli]
+   # Add any additional dependencies if required
+   ```
 
-Example Commands:
-```
-➕ Add New Employee:
-    "Onboard a new employee named Jane Doe. Her email is jane.doe@example.com and she starts on 2025-11-01."
+-----
 
-➕ Leave Request:
-    "I would like to request leave for two days, from 2025-10-25 to 2025-10-26."
+### Usage 💡
 
-➕ Check Leave History:
-    "What is the leave history for employee ID employee_id?"
+Interact with the HR-ASSIST system through **Claude Desktop**:
 
-➕ Schedule a Meeting:
-    "Schedule a team meeting for project ABC on Friday at 3:00 PM."
+* Launch Claude Desktop after configuration.
+* Click on **➕ Add from hr-assist** to send a request.
+* Use prompts such as:
+  * "Onboard a new employee named Jane Doe. Her email is jane.doe@example.com and she starts on 2025-11-01."
+  * "Schedule a team meeting for project ABC on Friday at 3:00 PM."
+  * "I would like to request leave for two days, from 2025-10-25 to 2025-10-26."
+  * "Write and send an email to a.jones@example.com with the subject 'Project Update' and the body 'The project is on track and will be completed by the deadline.'"
 
-➕ Raise a Ticket:
-    "My mouse is not working; I need a new one."
+-----
 
-➕ Send an Email:
-    "Write and send an email to a.jones@example.com with the subject 'Project Update' and the body 'The project is on track and will be completed by the deadline.'"
-```
+### Workflows 🖼️
 
----
+Here’s an example workflow:
 
-### 🖼️ Illustrative Workflows
-╔════════════════════════════╗  
-║ 📂 Add Employee Workflow   ║  
-║ 🔧 Raise Ticket Workflow   ║  
-╚════════════════════════════╝  
+**Add New Employee Workflow:**  
+<img src="resources/image.jpg" alt="Claude desktop prompt with fields" width="700"/>
 
-Add images/screenshots in the `resources` folder to demonstrate workflows visually.
+You can also add more images/screenshots in the `resources` folder to demonstrate additional workflows.
 
-<img src="resources/image.jpg" alt="Claude Desktop Prompt" style="width:auto;height:300px;padding-left:30px">
+-----
 
----
+### Copyright
 
-<div align="center">
-
-💡 **Tip:** Use diagrams and visuals to enhance presentation and improve clarity.
-
-</div>
+© 2025 Om Thaware. All rights reserved.
