@@ -101,8 +101,10 @@ Interact with the HR-ASSIST system through **Claude Desktop**:
 
 Here’s an example workflow:
 
-**Add New Employee Workflow:**  
+**Raise token image:**  
 <img width="427" height="371" alt="Image" src="https://github.com/user-attachments/assets/5cca4fd7-e7cb-4135-8f70-76c9e4240f51" />
+
+** Leave managment image **
 
 You can also add more images/screenshots in the `resources` folder to demonstrate additional workflows.
 
