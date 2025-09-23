@@ -37,7 +37,7 @@ Getting started is simple. Follow these steps to set up HR-ASSIST:
 1. **Clone the Repository:**  
    ```bash
    [git clone https://your-repository-url.git
-   cd atliq-hr-assist](https://github.com/OmThawaregitgub/Hr-assistant-manager-project)
+   cd hr-assist](https://github.com/OmThawaregitgub/Hr-assistant-manager-project)
    ```
 
 2. **Configure `claude_desktop_config.json`:**  
