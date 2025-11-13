@@ -1,4 +1,4 @@
-### 🤖 HR-ASSIST Agentic AI System
+## 🤖 HR-ASSIST Agentic AI System
 
 Welcome to **HR-ASSIST**!  
 This project is an **intelligent agentic AI system** designed to automate and streamline **Human Resources workflows**.  
